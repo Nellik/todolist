@@ -10,7 +10,7 @@ require_once 'header.php';
               <h3 class="box-title">Add Todo</h3>
             </div>
             <div class="box-body">
-              <form data-toggle="validator" method="POST" action="/public/todos/postCreate">
+              <form data-toggle="validator" method="POST" action="/public/todos/postCreate" enctype="multipart/form-data">
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="creator">Creator</label>
@@ -44,7 +44,7 @@ require_once 'header.php';
                 </div>
                 <div class="col-md-12">
                   <button type="submit" class="btn btn-primary">Add Todo</button>
-                  <input type="button" value="Preview" class="btn btn-primary" id="preview_btn">
+                  <input type="button" value="Preview" class="btn btn-primary" id="preview_btn" name="submit">
                 </div>
               </form>
             </div>

@@ -35,7 +35,10 @@ require_once 'header.php';
                           if (isset($data['data'][1]) && 'admin' === $data['data'][1]) { ?>
                             <a href="/public/todos/edit/<?php echo $row[ 'id' ]; ?>" class="btn btn-primary btn-xs" style="margin-left: 5px;">Edit</a>
                           <?php  }
-                         } else { ?>
+                        }  elseif ('image' == $index && null != $row[ $index ]) { ?>
+                           <td style="text-align: center;"><a href="<?php echo 'http://' . $_SERVER['SERVER_NAME'] . $row[ $index ]?>"  target="_blank">
+                             <img width="60" height="30" src="<?php echo $row[ $index ];?>"></a>
+                         <?php } else { ?>
                           <td>
                           <?php echo $row[ $index ];
                         } ?>

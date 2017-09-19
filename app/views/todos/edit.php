@@ -43,13 +43,21 @@ require_once 'header.php';
                     <div class="col-sm-11">
                       <div class="form-check">
                         <label class="form-check-label">
-                          <input class="form-check-input" type="radio" name="completed" id="gridRadios1" value="true" checked>
+                          <input class="form-check-input" type="radio" name="completed" id="gridRadios1" value="1"
+                          <?php if ( '1' == $data['data'][0]['completed'] ) { ?>
+                            checked
+                          <?php } ?>
+                          >
                           Yes
                         </label>
                       </div>
                       <div class="form-check">
                         <label class="form-check-label">
-                          <input class="form-check-input" type="radio" name="completed" id="gridRadios2" value="false">
+                          <input class="form-check-input" type="radio" name="completed" id="gridRadios2" value="0"
+                          <?php if ( '0' == $data['data'][0]['completed'] ) { ?>
+                            checked
+                          <?php } ?>
+                          >
                           No
                         </label>
                       </div>
